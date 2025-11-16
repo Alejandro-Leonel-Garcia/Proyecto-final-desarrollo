@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/* reset de css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+}
+
+/* Menu hamburguesa y menú */
+.hamburguesa{
+    display: flex;
+    color: white;
+    font-size: 35px;
+    display: none;
+}
+
+header{
+    display: flex;
+    background-color: black;
+    justify-content: space-between;    
+    padding: 10px 30px;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    column-gap: 10px;
+    list-style: none;
+    margin: 20px ;   
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.menu :hover{        
+        color:yellow;        
+    }
+
+header nav ul li.sub-menu{
+    position: relative;
+}
+
+header nav ul li.sub-menu ul{
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    padding: 10px;    
+}
+
+header nav ul li.sub-menu ul li a{
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li.sub-menu ul li{
+    padding: 5px;    
+}
+
+header nav ul li.sub-menu:hover ul{
+    display: block;
+}
+
+
+/* Titulo de los encabezados */
+.encabezado{
+    display: block;
+    align-items: center;
+    justify-items: center;
+}
+
+.titulo{
+    display: grid;
+    width: 600px;
+    height: 100px;
+    background-color: blue;
+    font-size: 40px;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow:0 0 10px;
+    color: black;   
+    
+}
+
+.sub-titulo{
+    display: grid;
+    width: 580px;
+    height: 100px;
+    background-color: blue;
+    font-size: 30px;
+    justify-content: center;
+    align-content: center; 
+    border-radius: 15px;
+    box-shadow:0 0 10px;
+    color: black;    
+}
+
+/* Fotos del index */
+.fotos{
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    margin: 20px 0px;
+
+}
+
+.fotos div{
+    display: grid;    
+    justify-content: center;
+    align-content: center;
+
+}
+
+/* Imagen con superposicion del link html secundarios */
+section .grilla div{
+    position: relative;
+}
+
+section .grilla div img{
+    border: solid 2px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    margin: 10px;
+}
+
+section .grilla div.uno:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;    
+    position: absolute;
+    background-color: rgba(19, 9, 9, 0.621);
+} 
+
+section .grilla div.dos:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(19, 9, 9, 0.621);
+}
+
+section .grilla div.tres:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(19, 9, 9, 0.621);
+} 
+
+section div a.link{    
+    position: absolute;
+    color: brown;
+    bottom: 0;
+    left: 70PX;    
+    text-decoration: none;
+    margin: 10px;
+
+
+}
+
+section div a:hover{    
+    color: yellow;
+    font-size: 20px;
+
+}
+
+/* Fotter pie de pagina */
+.informacion{
+    display: grid;
+    background-color: aqua;
+    font-size: 20px;
+    color: blue;
+    text-align: center;
+    margin: 30px 0px;
+    padding: 10px;          
+} 
+
+    footer ul li{
+    list-style: none;
+}
+
+
+/* Media queries para tablet */
+@media(max-width: 991px){
+    .hamburguesa:hover{
+        font-size: 30px;
+        color: blueviolet;
+    }
+    .hamburguesa{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .fotos{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 200px 200px 200px;
+    }
+}
+
+section div{
+    position: relative;
+}
+
+
+section div a{
+    position: absolute;
+    color: greenyellow;
+    bottom: 0;
+    left:calc(30%);
+    z-index: 2;
+    text-decoration: none;
+    margin: 5px;
+
+}
+
+section div a:hover{
+    color: yellow;
+    font-size: 20px;
+}
+
+
+/* Media queries para movil */
+@media(max-width: 500px){
+    .hamburguesa{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .fotos{
+        height: 100%;
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(6 200);
+        margin: 20px 0px;
+    }
+}
+
+section div{
+    position: relative;    
+}
+
+
+section div a{
+    position: absolute;
+    color: greenyellow;
+    bottom: 0;
+    left:calc(30%);
+    z-index: 2;
+    text-decoration: none;
+    margin: 5px;    
+
+}
+
+section div a:hover{
+    color: yellow;
+    font-size: 20px;
+}
