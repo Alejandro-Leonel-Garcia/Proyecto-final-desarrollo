@@ -135,6 +135,8 @@ section .grilla div{
 }
 
 section .grilla div img{
+    display: flex;
+    justify-self: center ;
     border: solid 2px;
     border-radius: 20px;
     box-shadow: 0 0 10px;
@@ -175,7 +177,7 @@ section div a.link{
     position: absolute;
     color: brown;
     bottom: 0;
-    left: 70PX;    
+    left: 150PX;    
     text-decoration: none;
     margin: 10px;
 
@@ -186,6 +188,22 @@ section div a:hover{
     color: yellow;
     font-size: 20px;
 
+}
+
+/* Slider de html bombas con bootstrap */
+div.carousel-inner{
+    width: 40%;
+    height: 40%;
+    justify-self: center ;    
+}
+
+.carousel-control-prev{
+    color: black;
+    background-color: rgba(0, 0, 0, 0.333);
+}
+
+.carousel-control-next{
+    background-color: rgba(0, 0, 0, 0.333);
 }
 
 /* Fotter pie de pagina */
